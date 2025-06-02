@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
@@ -14,42 +14,64 @@ function App() {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const heroRef = useRef(null);
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     setUser(storedUser);
 
-    // If no user stored and on root (login) page, do nothing
     if (!storedUser && location.pathname === "/") return;
-
-    // If admin is required but not logged in
     if (!storedUser && location.pathname !== "/") {
-      setUser({ role: "user" }); // default guest user
+      setUser({ role: "user" });
     }
-
-    // If admin required but not logged in
-    if (location.pathname !== "/" && storedUser?.role === "admin") {
-      return;
-    }
-
+    if (location.pathname !== "/" && storedUser?.role === "admin") return;
     if (storedUser?.role !== "admin" && location.pathname === "/") {
       navigate("/home");
     }
   }, [location.pathname, navigate]);
+
+  const scrollToSection = (section) => {
+    const sectionMap = {
+      hero: heroRef,
+      about: aboutRef,
+      projects: projectsRef,
+      contact: contactRef,
+    };
+
+    sectionMap[section]?.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   if (location.pathname === "/" && user?.role !== "admin") {
     return <Login />;
   }
 
   return (
-    <div className="font-sans">
-      <Navbar />
+    <div className="font-sans scroll-smooth">
+      <Navbar scrollToSection={scrollToSection} />
       <LiveUsers />
       <Routes>
-        <Route path="/home" element={<Hero />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/" element={user?.role === "admin" ? <LiveUsers /> : <Hero />} />
+        <Route
+          path="/home"
+          element={
+            <>
+              <div ref={heroRef}>
+                <Hero />
+              </div>
+              <div ref={aboutRef}>
+                <About />
+              </div>
+              <div ref={projectsRef}>
+                <Projects />
+              </div>
+              <div ref={contactRef}>
+                <Contact />
+              </div>
+            </>
+          }
+        />
       </Routes>
       <ChatBot />
     </div>

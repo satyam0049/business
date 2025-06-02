@@ -13,7 +13,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3001/api/contact", formData);
+      await axios.post("https://business-backend-k93t.onrender.com/api/contact", formData);
       alert("Message sent successfully!");
       setFormData({ name: "", email: "", message: "" });
      

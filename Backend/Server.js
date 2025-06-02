@@ -14,7 +14,7 @@ const Contact = require('./models/Contact');
 const app = express();
 const server = http.createServer(app);
 
-// Middleware
+// Middlewares
 app.use(cors());
 app.use(express.json());
 

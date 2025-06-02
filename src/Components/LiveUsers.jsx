@@ -4,7 +4,10 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const socket = io("http://localhost:3001");
+// const socket = io("http://localhost:3001");
+const socket = io("https://business-backend-k93t.onrender.com", {
+  transports: ["websocket"],
+});
 
 const LiveUsers = () => {
   const [socketUsers, setSocketUsers] = useState(0);

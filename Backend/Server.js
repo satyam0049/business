@@ -34,6 +34,7 @@ const io = new Server(server, {
 app.use(cors({
   origin: "https://satyam0049.github.io", // Production frontend origin
   methods: ["GET", "POST"],
+ allowedHeaders: ['Content-Type'],
 }));
 
 let usersOnline = 0;

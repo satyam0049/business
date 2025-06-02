@@ -69,7 +69,7 @@ const About = () => {
       <div className="grid md:grid-cols-2 gap-14 items-center">
         <div className="text-left">
           <img
-            src="/my.jpeg"
+            src="./my.jpeg"
             alt="Satyam"
             className="rounded-3xl shadow-2xl border-4 border-white dark:border-gray-700 w-72 h-72 object-cover mx-auto mb-6"
           />

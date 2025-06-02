@@ -18,7 +18,7 @@ const Navbar = () => {
         {/* Logo / Brand */}
         <div className="flex items-center space-x-3">
           <img
-            src="/images.jpg"
+            src="./images.jpg"
             alt="BusinessPro Logo"
             className="w-12 h-12 rounded-full object-cover border-2 border-indigo-600 shadow"
           />

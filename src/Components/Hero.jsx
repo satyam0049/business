@@ -18,10 +18,10 @@ const imageVariants = {
 
 const Hero = () => {
   const images = [
-    { src: "/bussiness2.webp", alt: "Design Thinking", rotate: "rotate-3", size: "w-40 h-40", delay: 0 },
-    { src: "/bussiness3.jpg", alt: "Team Collaboration", rotate: "-rotate-6", size: "w-48 h-48", delay: 0.15 },
-    { src: "/bussiness4.png", alt: "Web Development", rotate: "rotate-2 translate-x-6", size: "w-32 h-32", delay: 0.3 },
-    { src: "/bussiness1.png", alt: "Project Strategy", rotate: "-rotate-3 translate-y-3", size: "w-36 h-36", delay: 0.45 },
+    { src: "./bussiness2.webp", alt: "Design Thinking", rotate: "rotate-3", size: "w-40 h-40", delay: 0 },
+    { src: "./bussiness3.jpg", alt: "Team Collaboration", rotate: "-rotate-6", size: "w-48 h-48", delay: 0.15 },
+    { src: "./bussiness4.png", alt: "Web Development", rotate: "rotate-2 translate-x-6", size: "w-32 h-32", delay: 0.3 },
+    { src: "./bussiness1.png", alt: "Project Strategy", rotate: "-rotate-3 translate-y-3", size: "w-36 h-36", delay: 0.45 },
   ];
 
   return (

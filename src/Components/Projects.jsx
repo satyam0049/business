@@ -37,12 +37,12 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => (
 
 const Projects = () => {
   const projects = [
-    { name: "Tic-Tac App", tech: ["React", "Tailwind CSS"], image: "/tic.png", url: "https://satyam0049.github.io/tic-tac/" },
-    { name: "Education Detail", tech: ["React", "LocalStorage"], image: "/todo.avif", url: "https://satyam0049.github.io/from/" },
-    { name: "E-Commerce Website", tech: ["React", "OpenWeather"], image: "/e-commerce.jpg", url: "https://satyam0049.github.io/satyam/" },
-    { name: "Player Form", tech: ["React", "API"], image: "/bussiness1.png", url: "https://cricketauctionbid.netlify.app/form/" },
-    { name: "CricketAuction Website", tech: ["Socket.IO", "Node.js"], image: "/cricketauction.png", url: "https://cricketauctionbid.netlify.app" },
-    { name: "Blog CMS", tech: ["React", "Firebase"], image: "/bussiness6.webp", url: "http://localhost:5173/blog" },
+    { name: "Tic-Tac App", tech: ["React", "Tailwind CSS"], image: "./tic.png", url: "https://satyam0049.github.io/tic-tac/" },
+    { name: "Education Detail", tech: ["React", "LocalStorage"], image: "./todo.avif", url: "https://satyam0049.github.io/from/" },
+    { name: "E-Commerce Website", tech: ["React", "OpenWeather"], image: "./e-commerce.jpg", url: "https://satyam0049.github.io/satyam/" },
+    { name: "Player Form", tech: ["React", "API"], image: "./bussiness1.png", url: "https://cricketauctionbid.netlify.app/form/" },
+    { name: "CricketAuction Website", tech: ["Socket.IO", "Node.js"], image: "./cricketauction.png", url: "https://cricketauctionbid.netlify.app" },
+    { name: "Blog CMS", tech: ["React", "Firebase"], image: "./bussiness6.webp", url: "http://localhost:5173/blog" },
   ];
 
   const itemsPerPage = 3;

@@ -48,7 +48,7 @@ const Navbar = ({ scrollToSection }) => {
         <div className="md:hidden">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="text-gray-700 dark:text-white focus:outline-none"
+            className="text-dark dark:text-dark focus:outline-none"
           >
             {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -62,7 +62,7 @@ const Navbar = ({ scrollToSection }) => {
             <span
               key={item.name}
               onClick={() => handleScroll(item.id)}
-              className="block cursor-pointer w-full px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-300 hover:bg-indigo-100 dark:hover:bg-gray-800 hover:text-indigo-700 dark:hover:text-white transition-all duration-300"
+              className="block cursor-pointer w-full px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-300 hover:bg-blend-darken dark:hover:bg-gray-800 hover:text-indigo-700 dark:hover:text-white transition-all duration-300"
             >
               {item.name}
             </span>

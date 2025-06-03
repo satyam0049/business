@@ -62,8 +62,12 @@ const Navbar = ({ scrollToSection }) => {
             <span
               key={item.name}
               onClick={() => handleScroll(item.id)}
-              className="block cursor-pointer w-full px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-300 hover:bg-blend-darken dark:hover:bg-gray-800 hover:text-indigo-700 dark:hover:text-white transition-all duration-300"
-            >
+className="block cursor-pointer w-full px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-300 
+             hover:bg-gray-100 dark:hover:bg-gray-800 
+             active:bg-gray-200 dark:active:bg-gray-700 
+             focus:bg-gray-200 dark:focus:bg-gray-700 
+             hover:text-indigo-700 dark:hover:text-white 
+             transition-all duration-300"            >
               {item.name}
             </span>
           ))}
